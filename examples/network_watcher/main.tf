@@ -11,7 +11,8 @@
 // limitations under the License.
 
 module "network_watcher" {
-  source = "../.."
+  source  = "d2lqlh14iel5k2.cloudfront.net/module_primitive/network_watcher/azurerm"
+  version = "~> 1.0"
 
   network_watcher_name = local.network_watcher_name
   location             = var.location
@@ -21,7 +22,8 @@ module "network_watcher" {
 }
 
 module "resource_group" {
-  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-resource_group.git?ref=1.0.0"
+  source  = "d2lqlh14iel5k2.cloudfront.net/module_primitive/resource_group/azurerm"
+  version = "~> 1.0"
 
   name     = local.resource_group_name
   location = var.location
@@ -31,7 +33,8 @@ module "resource_group" {
 }
 
 module "resource_names" {
-  source = "git::https://github.com/launchbynttdata/tf-launch-module_library-resource_name.git?ref=1.0.0"
+  source  = "d2lqlh14iel5k2.cloudfront.net/module_library/resource_name/launch"
+  version = "~> 1.0"
 
   for_each = var.resource_names_map
 

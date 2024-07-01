@@ -106,16 +106,16 @@ If `make check` target is successful, developer is good to commit the code to pr
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-| Name                                                                      | Version  |
-| ------------------------------------------------------------------------- | -------- |
+| Name | Version |
+|------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | <= 1.5.5 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm)       | ~> 3.77  |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.77 |
 
 ## Providers
 
-| Name                                                          | Version |
-| ------------------------------------------------------------- | ------- |
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.95.0  |
+| Name | Version |
+|------|---------|
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.99.0 |
 
 ## Modules
 
@@ -123,22 +123,22 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                                       | Type     |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
+| Name | Type |
+|------|------|
 | [azurerm_network_watcher.network_watcher](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_watcher) | resource |
 
 ## Inputs
 
-| Name                                                                                               | Description                                                        | Type     | Default | Required |
-| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | -------- | ------- | :------: |
-| <a name="input_network_watcher_name"></a> [network\_watcher\_name](#input\_network\_watcher\_name) | Value of the network watcher name                                  | `string` | n/a     |   yes    |
-| <a name="input_location"></a> [location](#input\_location)                                         | Value of the location of the network watcher                       | `string` | n/a     |   yes    |
-| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name)    | Name of the resource group in which the network watcher is located | `string` | n/a     |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_network_watcher_name"></a> [network\_watcher\_name](#input\_network\_watcher\_name) | Value of the network watcher name | `string` | n/a | yes |
+| <a name="input_location"></a> [location](#input\_location) | Value of the location of the network watcher | `string` | n/a | yes |
+| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Name of the resource group in which the network watcher is located | `string` | n/a | yes |
 
 ## Outputs
 
-| Name                                             | Description                      |
-| ------------------------------------------------ | -------------------------------- |
-| <a name="output_id"></a> [id](#output\_id)       | The ID of the Network Watcher.   |
+| Name | Description |
+|------|-------------|
+| <a name="output_id"></a> [id](#output\_id) | The ID of the Network Watcher. |
 | <a name="output_name"></a> [name](#output\_name) | The name of the Network Watcher. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
