@@ -11,7 +11,7 @@
 // limitations under the License.
 
 module "network_watcher" {
-  source  = "d2lqlh14iel5k2.cloudfront.net/module_primitive/network_watcher/azurerm"
+  source  = "terraform.registry.launch.nttdata.com/module_primitive/network_watcher/azurerm"
   version = "~> 1.0"
 
   network_watcher_name = local.network_watcher_name
@@ -22,7 +22,7 @@ module "network_watcher" {
 }
 
 module "resource_group" {
-  source  = "d2lqlh14iel5k2.cloudfront.net/module_primitive/resource_group/azurerm"
+  source  = "terraform.registry.launch.nttdata.com/module_primitive/resource_group/azurerm"
   version = "~> 1.0"
 
   name     = local.resource_group_name
@@ -33,7 +33,7 @@ module "resource_group" {
 }
 
 module "resource_names" {
-  source  = "d2lqlh14iel5k2.cloudfront.net/module_library/resource_name/launch"
+  source  = "terraform.registry.launch.nttdata.com/module_library/resource_name/launch"
   version = "~> 1.0"
 
   for_each = var.resource_names_map
