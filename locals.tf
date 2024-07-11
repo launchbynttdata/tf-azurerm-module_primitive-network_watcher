@@ -10,23 +10,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-variable "network_watcher_name" {
-  type        = string
-  description = "Value of the network watcher name"
-}
-
-variable "location" {
-  type        = string
-  description = "Value of the location of the network watcher"
-}
-
-variable "resource_group_name" {
-  type        = string
-  description = "Name of the resource group in which the network watcher is located"
-}
-
-variable "tags" {
-  type        = map(string)
-  description = "(Optional) A mapping of tags to assign to the resource."
-  default     = {}
+locals {
+  default_tags = {
+    provisioner = "terraform"
+    resource_name = var.network_watcher_name
+  }
+  tags = merge(local.default_tags, var.tags)
 }
