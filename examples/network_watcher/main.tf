@@ -11,8 +11,7 @@
 // limitations under the License.
 
 module "network_watcher" {
-  source  = "terraform.registry.launch.nttdata.com/module_primitive/network_watcher/azurerm"
-  version = "~> 1.0"
+  source = "../.."
 
   network_watcher_name = local.network_watcher_name
   location             = var.location
@@ -34,7 +33,7 @@ module "resource_group" {
 
 module "resource_names" {
   source  = "terraform.registry.launch.nttdata.com/module_library/resource_name/launch"
-  version = "~> 1.0"
+  version = "~> 2.0"
 
   for_each = var.resource_names_map
 
