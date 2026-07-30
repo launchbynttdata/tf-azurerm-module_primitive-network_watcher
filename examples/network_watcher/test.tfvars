@@ -8,4 +8,4 @@ resource_names_map = {
     max_length = 80
   }
 }
-location = "centralus"
+location = "norwayeast"
