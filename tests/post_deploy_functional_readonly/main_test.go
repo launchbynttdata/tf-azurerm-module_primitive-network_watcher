@@ -38,5 +38,5 @@ func TestNetworkWatcherModule(t *testing.T) {
 		}).
 		Build()
 
-	lib.RunNonDestructiveTest(t, *ctx, testimpl.TestNetworkWatcher)
+	lib.RunNonDestructiveTest(t, *ctx, testimpl.TestComposableNetworkWatcher)
 }

@@ -38,5 +38,5 @@ func TestNetworkWatcherModule(t *testing.T) {
 		}).
 		Build()
 
-	lib.RunSetupTestTeardown(t, *ctx, testimpl.TestNetworkWatcher)
+	lib.RunSetupTestTeardown(t, *ctx, testimpl.TestComposableNetworkWatcher)
 }
