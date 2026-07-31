@@ -32,11 +32,11 @@ func TestNetworkWatcherModule(t *testing.T) {
 		SetTestConfigFolderName(testConfigsExamplesFolderDefault).
 		SetTestConfigFileName(infraTFVarFileNameDefault).
 		SetTestSpecificFlags(map[string]types.TestFlags{
-			"complete": {
+			"network_watcher": {
 				"IS_TERRAFORM_IDEMPOTENT_APPLY": true,
 			},
 		}).
 		Build()
 
-	lib.RunSetupTestTeardown(t, *ctx, testimpl.TestNetworkWatcher)
+	lib.RunSetupTestTeardown(t, *ctx, testimpl.TestComposableNetworkWatcher)
 }
