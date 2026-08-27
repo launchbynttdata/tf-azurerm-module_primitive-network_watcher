@@ -39,9 +39,9 @@ func TestComposableNetworkWatcher(t *testing.T, ctx types.TestContext) {
 	}
 
 	t.Run("doesNetworkWatcherExist", func(t *testing.T) {
-		resourceGroupName := terraform.Output(t, ctx.TerratestTerraformOptions(), "resource_group_name")
-		networkWatcherName := terraform.Output(t, ctx.TerratestTerraformOptions(), "name")
-		networkWatcherId := terraform.Output(t, ctx.TerratestTerraformOptions(), "id")
+		resourceGroupName := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "resource_group_name")
+		networkWatcherName := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "name")
+		networkWatcherId := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "id")
 
 		networkWatcher, err := networkWatcherClient.Get(context.Background(), resourceGroupName, networkWatcherName, nil)
 		if err != nil {
